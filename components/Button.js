@@ -17,6 +17,7 @@ const Button = styled('button', {
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: '$round',
+    cursor: 'pointer',
 
     variants: {
         variant: {

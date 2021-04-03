@@ -19,7 +19,7 @@ export default function Home() {
                         Mauli Design System
                     </Heading>
                     <Text as="p" variant="highlight">
-                        [WIP] Design System
+                        [WIP] Design System Playground
                     </Text>
                 </Stack>
             </Box>
@@ -40,6 +40,7 @@ export default function Home() {
                             <Heading as="h2" size="small">
                                 Heading Small
                             </Heading>
+                            <Button>Button</Button>
                         </Stack>
                     </Card>
                     <Card>
@@ -53,6 +54,7 @@ export default function Home() {
                             <Text as="p" size="small">
                                 Text Small
                             </Text>
+                            <Button variant="ghost">Ghost Button</Button>
                         </Stack>
                     </Card>
                 </Stack>
