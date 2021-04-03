@@ -1,7 +1,7 @@
-import { getCssString } from '../stitches.config';
+import { globalStyles } from '../stitches.config';
 
 function MyApp({ Component, pageProps }) {
-    getCssString();
+    globalStyles();
 
     return <Component {...pageProps} />;
 }
