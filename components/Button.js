@@ -10,6 +10,7 @@ const Button = styled('button', {
     margin: '0',
     flexShrink: '0',
     lineHeight: '1',
+    border: 'none',
 
     // Custom
     display: 'inline-flex',
