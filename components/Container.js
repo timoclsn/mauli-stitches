@@ -4,8 +4,6 @@ const size = createVariants(config.media, (value) => ({
     maxWidth: bpValue(config.media[value])
 }));
 
-console.log(size);
-
 const Container = styled('div', {
     mx: 'auto',
     px: '$md',
