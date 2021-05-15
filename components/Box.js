@@ -1,21 +1,17 @@
-import { styled, theme } from '../stitches.config';
+import { createVariants, styled, theme } from '../stitches.config';
 
-const inset = Object.keys(theme.sizes).reduce(
-    (acc, value) => ({
-        none: {
-            p: 'none'
-        },
-        ...acc,
-        [value]: {
-            p: `$${value}`
-        }
-    }),
-    {}
-);
+const inset = createVariants(theme.sizes, (value) => ({
+    p: `$${value}`
+}));
 
 const Box = styled('div', {
     variants: {
-        inset
+        inset: {
+            none: {
+                p: 'none'
+            },
+            ...inset
+        }
     },
 
     defaultVariants: {

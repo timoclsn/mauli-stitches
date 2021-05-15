@@ -197,3 +197,17 @@ export const leadingTrimRef = {
     topCrop: 5,
     bottomCrop: 6
 };
+
+export function createVariants(scale, variant) {
+    return Object.keys(scale).reduce(
+        (acc, value) => ({
+            ...acc,
+            [value]: variant(value)
+        }),
+        {}
+    );
+}
+
+export function bpValue(bp) {
+    return bp.split(' ')[1]?.slice(0, -1) || '0px';
+}

@@ -1,14 +1,8 @@
-import { styled, theme } from '../stitches.config';
+import { createVariants, styled, theme } from '../stitches.config';
 
-const space = Object.keys(theme.space).reduce(
-    (acc, value) => ({
-        ...acc,
-        [value]: {
-            $$gap: `$space$${value}`
-        }
-    }),
-    {}
-);
+const space = createVariants(theme.space, (value) => ({
+    $$gap: `$space$${value}`
+}));
 
 const Stack = styled('div', {
     display: 'flex',

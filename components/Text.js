@@ -1,29 +1,22 @@
 import { leadingTrim } from 'leading-trim';
 
-import { leadingTrimRef, styled, theme } from '../stitches.config';
+import {
+    createVariants,
+    leadingTrimRef,
+    styled,
+    theme
+} from '../stitches.config';
 
-const size = Object.keys(theme.fontSizes).reduce(
-    (acc, value) => ({
-        ...acc,
-        [value]: {
-            fontSize: `$${value}`
-        }
-    }),
-    {}
-);
+const size = createVariants(theme.fontSizes, (value) => ({
+    fontSize: `$${value}`
+}));
 
-const leading = Object.keys(theme.lineHeights).reduce(
-    (acc, value) => ({
-        ...acc,
-        [value]: {
-            ...leadingTrim({
-                lineHeight: theme.lineHeights[value].value,
-                reference: leadingTrimRef
-            })
-        }
-    }),
-    {}
-);
+const leading = createVariants(theme.lineHeights, (value) => ({
+    ...leadingTrim({
+        lineHeight: theme.lineHeights[value].value,
+        reference: leadingTrimRef
+    })
+}));
 
 const Text = styled('span', {
     variants: {

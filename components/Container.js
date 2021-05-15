@@ -1,28 +1,26 @@
-import { config, styled } from '../stitches.config';
+import { bpValue, config, createVariants, styled } from '../stitches.config';
 
-const size = Object.keys(config.media).reduce(
-    (acc, value) => ({
-        none: {
-            maxWidth: 'none'
-        },
-        ...acc,
-        [value]: {
-            maxWidth: `@${value}`
-        }
-    }),
-    {}
-);
+const size = createVariants(config.media, (value) => ({
+    maxWidth: bpValue(config.media[value])
+}));
+
+console.log(size);
 
 const Container = styled('div', {
     mx: 'auto',
     px: '$md',
 
     variants: {
-        size
+        size: {
+            none: {
+                maxWidth: 'none'
+            },
+            ...size
+        }
     },
 
     defaultVariants: {
-        size: 'xl'
+        size: 'lg'
     }
 });
 
