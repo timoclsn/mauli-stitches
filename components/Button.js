@@ -1,8 +1,9 @@
+import { forwardRef } from 'react';
+
 import { styled } from '../stitches.config';
 
-const Button = styled('button', {
+const StyledButton = styled('button', {
     // Reset
-    boxSizing: 'border-box',
     appearance: 'none',
     outline: 'none',
     textDecoration: 'none',
@@ -40,7 +41,6 @@ const Button = styled('button', {
                     opacity: 0.5 // TODO: Use color
                 }
             },
-
             ghost: {
                 color: '$hiContrast',
                 boxShadow: 'inset 0 0 0 2px $colors$hiContrast',
@@ -58,42 +58,58 @@ const Button = styled('button', {
                 '&:disabled': {
                     opacity: 0.5 // TODO: Use color
                 }
+            },
+            link: {
+                p: '0',
+                color: 'inherit',
+                backgroundColor: 'inherit',
+                '&:hover': {
+                    opacity: 0.5 // TODO: Use color
+                },
+                '&:active': {},
+                '&:focus': {},
+                '&:disabled': {
+                    opacity: 0.3 // TODO: Use color
+                }
             }
         },
 
         size: {
-            medium: {
-                fontSize: '$3',
+            md: {
+                fontSize: '$md',
                 fontWeight: '$bold',
-                padding: '$4 $5',
+                padding: '$md $lg',
                 svg: {
-                    width: '16px',
-                    height: '16px'
+                    size: '$md'
                 },
-                '> * + *': {
-                    marginLeft: '$3'
-                }
-            },
+                gap: '$sm'
+            }
+        },
 
-            small: {
-                fontSize: '$2',
-                fontWeight: '$normal',
-                padding: '$3 $4',
-                svg: {
-                    width: '12px',
-                    height: '12px'
-                },
-                '> * + *': {
-                    marginLeft: '$2'
-                }
+        fullWidth: {
+            true: {
+                width: '100%'
             }
         }
     },
 
     defaultVariants: {
         variant: 'solid',
-        size: 'medium'
+        size: 'md'
     }
 });
 
-export default Button;
+export default forwardRef(function Button(
+    { children, as, type, ...props },
+    ref
+) {
+    return (
+        <StyledButton
+            as={props.href ? 'a' : as}
+            type={as === 'button' ? type : undefined}
+            ref={ref}
+            {...props}>
+            {children}
+        </StyledButton>
+    );
+});

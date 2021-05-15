@@ -1,10 +1,12 @@
 import Head from 'next/head';
+import { ArrowRight } from 'react-feather';
 
 import Box from '../components/Box';
 import Button from '../components/Button';
 import Card from '../components/Card';
 import Container from '../components/Container';
 import Heading from '../components/Heading';
+import Label from '../components/Label';
 import Stack from '../components/Stack';
 import Text from '../components/Text';
 
@@ -72,55 +74,99 @@ export default function Home() {
                     key="twitter:creator"
                 />
             </Head>
-            <Container size="large">
-                <Box
-                    inset={{
-                        '@initial': 'small',
-                        '@bp1': 'large'
-                    }}>
-                    <Stack>
-                        <Heading as="h1" size="large">
-                            Mauli Design System
-                        </Heading>
-                        <Text as="p" variant="highlight">
-                            [WIP] Design System Playground
-                        </Text>
-                    </Stack>
-                </Box>
-                <Box inset="large">
-                    <Stack
-                        direction={{
-                            '@initial': 'vertical',
-                            '@bp1': 'horizontal'
-                        }}>
-                        <Card>
-                            <Stack>
-                                <Heading as="h2" size="large">
-                                    Heading Large
-                                </Heading>
-                                <Heading as="h2" size="medium">
-                                    Heading Medium
-                                </Heading>
-                                <Heading as="h2" size="small">
-                                    Heading Small
-                                </Heading>
-                                <Button>Button</Button>
-                            </Stack>
-                        </Card>
-                        <Card>
-                            <Stack>
-                                <Text as="p" size="large">
-                                    Text Large
-                                </Text>
-                                <Text as="p" size="medium">
-                                    Text Medium
-                                </Text>
-                                <Text as="p" size="small">
-                                    Text Small
-                                </Text>
-                                <Button variant="ghost">Ghost Button</Button>
-                            </Stack>
-                        </Card>
+
+            <Container>
+                <Box inset="2xl">
+                    <Stack space="2xl">
+                        <Stack>
+                            <Heading as="h1" size="5xl">
+                                Mauli Design System
+                            </Heading>
+                            <Text as="p" variant="highlight">
+                                [WIP] Design System Playground
+                            </Text>
+                        </Stack>
+
+                        <Stack
+                            direction={{
+                                '@initial': 'vertical',
+                                '@md': 'horizontal'
+                            }}>
+                            <Card fullWidth>
+                                <Stack>
+                                    <Heading
+                                        as="h2"
+                                        variant="normal"
+                                        size="2xl">
+                                        Card Normal
+                                    </Heading>
+                                    <Text as="p">
+                                        dsj ad sadhsa dhsdg asdgsa gdsagd
+                                        asdgsgd agd sgadsagd.
+                                    </Text>
+                                    <Stack
+                                        direction="horizontal"
+                                        space="sm"
+                                        wrap>
+                                        <Label>Label</Label>
+                                        <Label>Label</Label>
+                                        <Label>Label</Label>
+                                        <Label>Label</Label>
+                                        <Label>Label</Label>
+                                        <Label>Label</Label>
+                                        <Label>Label</Label>
+                                        <Label>Label</Label>
+                                        <Label>Label</Label>
+                                    </Stack>
+                                    <Stack
+                                        direction="horizontal"
+                                        justify="end"
+                                        align="center"
+                                        fullWith>
+                                        <Button onClick={() => alert('Test')}>
+                                            <ArrowRight />
+                                            Button
+                                        </Button>
+                                        <Button variant="ghost">Ghost</Button>
+                                        <Button
+                                            variant="link"
+                                            href="https:timoclasen.de"
+                                            target="_blank">
+                                            <ArrowRight />
+                                            Link
+                                        </Button>
+                                    </Stack>
+                                </Stack>
+                            </Card>
+
+                            <Card variant="highlight" fullWidth>
+                                <Stack>
+                                    <Heading
+                                        as="h2"
+                                        variant="normal"
+                                        size="2xl">
+                                        Card Highlight
+                                    </Heading>
+                                    <Text as="p">
+                                        Lorem ipsum dolor sit amet, consectetuer
+                                        adipiscing elit. Aenean commodo ligula
+                                        eget dolor. Aenean massa. Cum sociis
+                                        natoque penatibus et magnis dis
+                                        parturient montes, nascetur ridiculus
+                                        mus. Donec quam felis, ultricies nec,
+                                        pellentesque eu, pretium quis, sem.
+                                        Nulla consequat massa quis enim. Donec
+                                        pede justo, fringilla vel, aliquet nec,
+                                        vulputate eget, arcu. In enim justo,
+                                        rhoncus ut, imperdiet a, venenatis
+                                        vitae, justo. Nullam dictum felis eu
+                                        pede mollis pretium. Integer tincidunt.
+                                        Cras dapibus. Vivamus elementum semper
+                                        nisi. Aenean vulputate eleifend tellus.
+                                    </Text>
+                                </Stack>
+                            </Card>
+                        </Stack>
                     </Stack>
                 </Box>
             </Container>

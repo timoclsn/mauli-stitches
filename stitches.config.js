@@ -1,6 +1,6 @@
 import { createCss } from '@stitches/react';
 
-export const { styled, getCssString, theme, global } = createCss({
+export const { styled, getCssString, theme, config, global } = createCss({
     theme: {
         colors: {
             white: 'white',
@@ -13,99 +13,143 @@ export const { styled, getCssString, theme, global } = createCss({
             highlight: '$purple'
         },
         fonts: {
-            sans: 'Inter, sans-serif'
+            sans: 'Inter, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif'
         },
         fontSizes: {
-            1: '12px',
-            2: '14px',
-            3: '16px',
-            4: '20px',
-            5: '24px',
-            6: '32px',
-            7: '48px',
-            8: '64px',
-            9: '72px'
+            xs: '0.75rem',
+            sm: '0.875rem',
+            md: '1rem',
+            lg: '1.125rem',
+            xl: '1.25rem',
+            '2xl': '1.5rem',
+            '3xl': '1.875rem',
+            '4xl': '2.25rem',
+            '5xl': '3rem'
+        },
+        lineHeights: {
+            xs: '1',
+            sm: '1.25',
+            md: '1.5',
+            lg: '1.75',
+            xl: '2',
+            '2xl': '2.25',
+            '3xl': '2.5',
+            '4xl': '2.75',
+            '5xl': '3'
         },
         fontWeights: {
             normal: 400,
             bold: 700
         },
         space: {
-            1: '2px',
-            2: '4px',
-            3: '8px',
-            4: '16px',
-            5: '32px',
-            6: '64px',
-            7: '128px',
-            8: '256px',
-            9: '512px'
+            xs: '0.25rem',
+            sm: '0.5rem',
+            md: '1rem',
+            lg: '1.5rem',
+            xl: '2rem',
+            '2xl': '4rem',
+            '3xl': '8rem'
         },
         sizes: {
-            1: '2px',
-            2: '4px',
-            3: '8px',
-            4: '16px',
-            5: '32px',
-            6: '64px',
-            7: '128px',
-            8: '256px',
-            9: '512px'
-        },
-        lineHeights: {
-            1: '18px',
-            2: '21px',
-            3: '24px',
-            4: '30px',
-            5: '36px',
-            6: '48px',
-            7: '72px',
-            8: '96px',
-            9: '108px'
+            xs: '0.25rem',
+            sm: '0.5rem',
+            md: '1rem',
+            lg: '1.5rem',
+            xl: '2rem',
+            '2xl': '4rem',
+            '3xl': '8rem'
         },
         radii: {
-            1: '2px',
-            2: '4px',
-            3: '8px',
-            4: '16px',
-            5: '32px',
+            xs: '0.25rem',
+            sm: '0.5rem',
+            md: '1rem',
+            lg: '1.5rem',
+            xl: '2rem',
+            '2xl': '4rem',
+            '3xl': '8rem',
             round: '9999px'
         }
     },
     media: {
-        bp1: '(min-width: 640px)',
-        bp2: '(min-width: 768px)',
-        bp3: '(min-width: 1024px)',
-        bp4: '(min-width: 1280px)'
-    }
-});
-
-export const darkTheme = theme('dark', {
-    colors: {
-        white: 'white',
-        black: 'black',
-        purple: '#4F5FEF',
-
-        // Semantic
-        loContrast: '$black',
-        hiContrast: '$white',
-        highlight: '$purple'
+        sm: '(min-width: 600px)',
+        md: '(min-width: 900px)',
+        lg: '(min-width: 1200px)'
+    },
+    utils: {
+        m: () => (value) => ({
+            marginTop: value,
+            marginBottom: value,
+            marginLeft: value,
+            marginRight: value
+        }),
+        mt: () => (value) => ({
+            marginTop: value
+        }),
+        mr: () => (value) => ({
+            marginRight: value
+        }),
+        mb: () => (value) => ({
+            marginBottom: value
+        }),
+        ml: () => (value) => ({
+            marginLeft: value
+        }),
+        mx: () => (value) => ({
+            marginLeft: value,
+            marginRight: value
+        }),
+        my: () => (value) => ({
+            marginTop: value,
+            marginBottom: value
+        }),
+        p: () => (value) => ({
+            paddingTop: value,
+            paddingBottom: value,
+            paddingLeft: value,
+            paddingRight: value
+        }),
+        pt: () => (value) => ({
+            paddingTop: value
+        }),
+        pr: () => (value) => ({
+            paddingRight: value
+        }),
+        pb: () => (value) => ({
+            paddingBottom: value
+        }),
+        pl: () => (value) => ({
+            paddingLeft: value
+        }),
+        px: () => (value) => ({
+            paddingLeft: value,
+            paddingRight: value
+        }),
+        py: () => (value) => ({
+            paddingTop: value,
+            paddingBottom: value
+        }),
+        size: () => (value) => ({
+            width: value,
+            height: value
+        })
     }
 });
 
 export const globalStyles = global({
     // Reset
-    'html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, main, menu, nav, output, ruby, section, summary, time, mark, audio, video': {
-        margin: '0',
-        padding: '0',
-        border: '0',
-        fontSize: '100%',
-        font: 'inherit',
-        verticalAlign: 'baseline'
-    },
-    'article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section': {
-        display: 'block'
-    },
+    'html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, main, menu, nav, output, ruby, section, summary, time, mark, audio, video':
+        {
+            margin: '0',
+            padding: '0',
+            border: '0',
+            fontSize: '100%',
+            font: 'inherit',
+            verticalAlign: 'baseline'
+        },
+    'article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section':
+        {
+            display: 'block'
+        },
     '*[hidden]': {
         display: 'none'
     },
@@ -126,6 +170,8 @@ export const globalStyles = global({
     },
 
     // Custom
+    '*, *::before, *::after': { boxSizing: 'border-box' },
+
     '@font-face': {
         fontFamily: 'Inter',
         fontStyle: 'normal',
@@ -134,13 +180,13 @@ export const globalStyles = global({
         src: 'url(/fonts/inter-var-latin.woff2) format("woff2")'
     },
     html: {
-        fontFamily: 'Inter'
+        fontFamily: '$sans'
     }
 });
 
 // Leading trim:
 // This has to be adapted for different custom fonts
-// This config is for "Inter"
+// This  is for "Inter"
 // https://github.com/rudeayelo/leading-trim
 // http://text-crop.eightshapes.com
 // https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62

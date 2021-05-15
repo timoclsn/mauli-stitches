@@ -1,26 +1,28 @@
-import { styled } from '../stitches.config';
+import { config, styled } from '../stitches.config';
+
+const size = Object.keys(config.media).reduce(
+    (acc, value) => ({
+        none: {
+            maxWidth: 'none'
+        },
+        ...acc,
+        [value]: {
+            maxWidth: `@${value}`
+        }
+    }),
+    {}
+);
 
 const Container = styled('div', {
-    boxSizing: 'border-box',
-    margin: '0 auto',
-    width: '100%',
+    mx: 'auto',
+    px: '$md',
 
     variants: {
-        size: {
-            small: {
-                maxWidth: '640px'
-            },
-            medium: {
-                maxWidth: '768px'
-            },
-            large: {
-                maxWidth: '1024px'
-            }
-        }
+        size
     },
 
     defaultVariants: {
-        size: 'medium'
+        size: 'xl'
     }
 });
 

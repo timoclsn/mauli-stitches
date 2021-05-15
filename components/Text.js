@@ -1,21 +1,35 @@
 import { leadingTrim } from 'leading-trim';
 
-import { leadingTrimRef, styled } from '../stitches.config';
+import { leadingTrimRef, styled, theme } from '../stitches.config';
 
-function getLeadingTrimCSS(lineHeight) {
-    return leadingTrim({
-        lineHeight: lineHeight,
-        reference: leadingTrimRef
-    });
-}
+const size = Object.keys(theme.fontSizes).reduce(
+    (acc, value) => ({
+        ...acc,
+        [value]: {
+            fontSize: `$${value}`
+        }
+    }),
+    {}
+);
+
+const leading = Object.keys(theme.lineHeights).reduce(
+    (acc, value) => ({
+        ...acc,
+        [value]: {
+            ...leadingTrim({
+                lineHeight: theme.lineHeights[value].value,
+                reference: leadingTrimRef
+            })
+        }
+    }),
+    {}
+);
 
 const Text = styled('span', {
-    ...getLeadingTrimCSS(1.2),
-
     variants: {
         variant: {
             normal: {
-                color: '$hiContrast'
+                color: 'inherit'
             },
             highlight: {
                 color: '$highlight'
@@ -31,17 +45,9 @@ const Text = styled('span', {
             }
         },
 
-        size: {
-            small: {
-                fontSize: '$2'
-            },
-            medium: {
-                fontSize: '$3'
-            },
-            large: {
-                fontSize: '$4'
-            }
-        },
+        size,
+
+        leading,
 
         align: {
             left: {
@@ -59,7 +65,8 @@ const Text = styled('span', {
     defaultVariants: {
         variant: 'normal',
         weight: 'normal',
-        size: 'medium',
+        size: 'md',
+        leading: 'md',
         align: 'left'
     }
 });

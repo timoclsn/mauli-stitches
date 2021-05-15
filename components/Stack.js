@@ -1,76 +1,79 @@
-import { styled } from '../stitches.config';
+import { styled, theme } from '../stitches.config';
+
+const space = Object.keys(theme.space).reduce(
+    (acc, value) => ({
+        ...acc,
+        [value]: {
+            $$gap: `$space$${value}`
+        }
+    }),
+    {}
+);
 
 const Stack = styled('div', {
-    boxSizing: 'border-box',
     display: 'flex',
+    gap: '$$gap',
 
     variants: {
         direction: {
             vertical: {
-                flexDirection: 'column',
-                '> * + *': {
-                    margin: '$$gap 0 0 0'
-                }
+                flexDirection: 'column'
             },
             horizontal: {
-                flexDirection: 'row',
-                '> * + *': {
-                    margin: '0 0 0 $$gap'
-                }
+                flexDirection: 'row'
             }
         },
-
-        space: {
-            xsmall: {
-                $$gap: '$space$2'
-            },
-            small: {
-                $$gap: '$space$3'
-            },
-            medium: {
-                $$gap: '$space$4'
-            },
-            large: {
-                $$gap: '$space$5'
-            },
-            xlarge: {
-                $$gap: '$space$6'
-            }
-        },
-
+        space,
         align: {
             start: {
-                alignItems: 'start'
+                alignItems: 'flex-start'
             },
             center: {
                 alignItems: 'center'
             },
             end: {
-                alignItems: 'end'
+                alignItems: 'flex-end'
+            },
+            baseline: {
+                alignItems: 'baseline'
             }
         },
-
         justify: {
             start: {
-                justifyContet: 'start'
+                justifyContent: 'flex-start'
             },
             center: {
-                justifyContet: 'center'
+                justifyContent: 'center'
             },
             end: {
-                justifyContet: 'end'
+                justifyContent: 'flex-end'
             },
             between: {
                 justifyContent: 'space-between'
+            }
+        },
+        wrap: {
+            true: {
+                flexWrap: 'wrap'
+            }
+        },
+        fullWith: {
+            true: {
+                width: '100%'
+            }
+        },
+        debug: {
+            true: {
+                border: '1px solid red'
             }
         }
     },
 
     defaultVariants: {
         direction: 'vertical',
-        space: 'medium',
+        space: 'md',
         align: 'start',
-        justify: 'center'
+        justify: 'start'
     }
 });
 

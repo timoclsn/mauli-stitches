@@ -1,27 +1,25 @@
-import { styled } from '../stitches.config';
+import { styled, theme } from '../stitches.config';
+
+const inset = Object.keys(theme.sizes).reduce(
+    (acc, value) => ({
+        none: {
+            p: 'none'
+        },
+        ...acc,
+        [value]: {
+            p: `$${value}`
+        }
+    }),
+    {}
+);
 
 const Box = styled('div', {
-    boxSizing: 'border-box',
-
     variants: {
-        inset: {
-            none: {
-                padding: 'none'
-            },
-            small: {
-                padding: '$4'
-            },
-            medium: {
-                padding: '$5'
-            },
-            large: {
-                padding: '$6'
-            }
-        }
+        inset
     },
 
     defaultVariants: {
-        inset: 'medium'
+        inset: 'none'
     }
 });
 

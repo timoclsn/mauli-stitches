@@ -2,9 +2,7 @@ import { styled } from '../stitches.config';
 import Box from './Box';
 
 const Card = styled(Box, {
-    boxSizing: 'border-box',
-    borderRadius: '$4',
-    width: '100%',
+    borderRadius: '$lg',
 
     variants: {
         variant: {
@@ -16,11 +14,18 @@ const Card = styled(Box, {
                 color: '$white',
                 backgroundColor: '$highlight'
             }
+        },
+
+        fullWidth: {
+            true: {
+                width: '100%'
+            }
         }
     },
 
     defaultVariants: {
-        variant: 'normal'
+        variant: 'normal',
+        inset: 'xl'
     }
 });
 
