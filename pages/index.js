@@ -79,9 +79,7 @@ export default function Home() {
                 <Box inset="2xl">
                     <Stack space="2xl">
                         <Stack>
-                            <Heading as="h1" size="5xl">
-                                Mauli Design System
-                            </Heading>
+                            <Heading as="h1">Mauli Design System</Heading>
                             <Text as="p" variant="highlight">
                                 [WIP] Design System Playground
                             </Text>
