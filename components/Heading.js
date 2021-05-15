@@ -4,7 +4,8 @@ import Text from './Text';
 const Heading = styled(Text, {
     defaultVariants: {
         weight: 'bold',
-        size: '5xl'
+        size: '5xl',
+        leading: 'xs'
     }
 });
 

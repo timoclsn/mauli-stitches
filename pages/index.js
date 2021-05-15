@@ -76,7 +76,11 @@ export default function Home() {
             </Head>
 
             <Container>
-                <Box inset="2xl">
+                <Box
+                    inset={{
+                        '@initial': 'md',
+                        '@sm': '2xl'
+                    }}>
                     <Stack space="2xl">
                         <Stack>
                             <Heading as="h1">Mauli Design System</Heading>
@@ -117,9 +121,15 @@ export default function Home() {
                                         <Label>Label</Label>
                                     </Stack>
                                     <Stack
-                                        direction="horizontal"
+                                        direction={{
+                                            '@initial': 'vertical',
+                                            '@sm': 'horizontal'
+                                        }}
                                         justify="end"
-                                        align="center"
+                                        align={{
+                                            '@initial': 'start',
+                                            '@sm': 'center'
+                                        }}
                                         fullWith>
                                         <Button onClick={() => alert('Test')}>
                                             <ArrowRight />
