@@ -118,7 +118,6 @@ export default function Home() {
                                         <Label>Label</Label>
                                         <Label>Label</Label>
                                         <Label>Label</Label>
-                                        <Label>Label</Label>
                                     </Stack>
                                     <Stack
                                         direction={{
@@ -137,6 +136,7 @@ export default function Home() {
                                         </Button>
                                         <Button variant="ghost">Ghost</Button>
                                         <Button
+                                            as="a"
                                             variant="link"
                                             href="https:timoclasen.de"
                                             target="_blank">

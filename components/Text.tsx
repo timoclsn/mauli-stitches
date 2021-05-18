@@ -7,7 +7,9 @@ import {
     theme
 } from '../stitches.config';
 
-const size = createVariants(theme.fontSizes, (value) => ({
+type TFontSizes = keyof typeof theme.fontSizes;
+
+const size = createVariants<TFontSizes>(theme.fontSizes, (value) => ({
     fontSize: `$${value}`
 }));
 
