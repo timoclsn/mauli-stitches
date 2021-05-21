@@ -20,29 +20,108 @@ const Button = styled('button', {
     variants: {
         variant: {
             solid: {
-                color: '$$loContrast',
-                backgroundColor: '$$hiContrast',
+                color: '$$solidText',
+                backgroundColor: '$$solidBg',
                 padding: '$$padding',
-                borderRadius: '$round'
+                borderRadius: '$round',
+                '&:hover': {
+                    boxShadow: 'inset 0 0 0 2px $$solidBorderHover'
+                },
+                '&:active': {
+                    backgroundColor: '$$solidBgActive',
+                    boxShadow: 'inset 0 0 0 2px $$solidBorderActive'
+                },
+                '&:focus': {
+                    boxShadow: 'inset 0 0 0 2px $$solidBorderFocus'
+                },
+                '&:disabled': {
+                    backgroundColor: '$$solidBgDisabled'
+                }
             },
             ghost: {
-                color: '$$hiContrast',
-                boxShadow: 'inset 0 0 0 2px $$hiContrast',
+                color: '$$ghostText',
+                boxShadow: 'inset 0 0 0 2px $$ghostBorder',
                 padding: '$$padding',
-                borderRadius: '$round'
+                borderRadius: '$round',
+                '&:hover': {
+                    backgroundColor: '$$ghostBgHover'
+                },
+                '&:active': {
+                    backgroundColor: '$$ghostBgActive'
+                },
+                '&:focus': {
+                    color: '$$ghostTextFocus',
+                    boxShadow: 'inset 0 0 0 2px $$ghostBorderFocus'
+                },
+                '&:disabled': {
+                    color: '$$ghostTextDisabled',
+                    boxShadow: 'inset 0 0 0 2px $$ghostBorderDisabled'
+                }
             },
             link: {
-                color: '$$hiContrast'
+                color: '$$linkText',
+                '&:hover': {
+                    color: '$$linkTextHover'
+                },
+                '&:active': {
+                    color: '$$linkTextActive'
+                },
+                '&:focus': {
+                    color: '$$linkTextFocus'
+                },
+                '&:disabled': {
+                    color: '$$linkTextDisabled'
+                }
             }
         },
         color: {
             normal: {
-                $$loContrast: '$colors$gray100',
-                $$hiContrast: '$colors$gray1000'
+                $$solidText: '$colors$gray100',
+                $$solidBg: '$colors$gray1000',
+                $$solidBorderHover: '$colors$gray900',
+                $$solidBorderActive: '$colors$gray900',
+                $$solidBgActive: '$colors$gray1000',
+                $$solidBorderFocus: '$colors$gray900',
+                $$solidBgDisabled: '$colors$gray600',
+
+                $$ghostText: '$colors$gray1000',
+                $$ghostBorder: '$colors$gray1000',
+                $$ghostBgHover: '$colors$gray200',
+                $$ghostBgActive: '$colors$gray200',
+                $$ghostTextFocus: '$colors$gray900',
+                $$ghostBorderFocus: '$colors$gray900',
+                $$ghostTextDisabled: '$colors$gray600',
+                $$ghostBorderDisabled: '$colors$gray600',
+
+                $$linkText: '$colors$gray1000',
+                $$linkTextHover: '$colors$gray900',
+                $$linkTextActive: '$colors$gray900',
+                $$linkTextFocus: '$colors$gray900',
+                $$linkTextDisabled: '$colors$gray600'
             },
             highlight: {
-                $$loContrast: '$colors$indigo100',
-                $$hiContrast: '$colors$indigo800'
+                $$solidText: '$colors$indigo100',
+                $$solidBg: '$colors$indigo800',
+                $$solidBorderHover: '$colors$indigo1000',
+                $$solidBorderActive: '$colors$indigo1000',
+                $$solidBgActive: '$colors$indigo900',
+                $$solidBorderFocus: '$colors$indigo1000',
+                $$solidBgDisabled: '$colors$indigo600',
+
+                $$ghostText: '$colors$indigo800',
+                $$ghostBorder: '$colors$indigo800',
+                $$ghostBgHover: '$colors$indigo200',
+                $$ghostBgActive: '$colors$indigo200',
+                $$ghostTextFocus: '$colors$indigo900',
+                $$ghostBorderFocus: '$colors$indigo900',
+                $$ghostTextDisabled: '$colors$indigo600',
+                $$ghostBorderDisabled: '$colors$indigo600',
+
+                $$linkText: '$colors$indigo800',
+                $$linkTextHover: '$colors$indigo1000',
+                $$linkTextActive: '$colors$indigo1000',
+                $$linkTextFocus: '$colors$indigo1000',
+                $$linkTextDisabled: '$colors$indigo600'
             }
         },
         size: {
@@ -64,7 +143,7 @@ const Button = styled('button', {
     },
     defaultVariants: {
         variant: 'solid',
-        color: 'highlight',
+        color: 'normal',
         size: 'md'
     }
 });

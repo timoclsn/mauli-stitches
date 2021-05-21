@@ -128,7 +128,9 @@ export default function Home() {
                                             '@sm': 'center'
                                         }}
                                         fullWith>
-                                        <Button onClick={() => alert('Test')}>
+                                        <Button
+                                            color="highlight"
+                                            onClick={() => alert('Test')}>
                                             <ArrowRight />
                                             Button
                                         </Button>
@@ -136,7 +138,6 @@ export default function Home() {
                                         <Button
                                             as="a"
                                             variant="link"
-                                            color="normal"
                                             href="https:timoclasen.de"
                                             target="_blank">
                                             <ArrowRight />
