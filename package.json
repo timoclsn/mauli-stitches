@@ -9,6 +9,7 @@
         "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
     },
     "dependencies": {
+        "@radix-ui/colors": "^0.1.4",
         "@stitches/react": "^0.1.9",
         "leading-trim": "^1.0.1",
         "next": "^10.2.0",

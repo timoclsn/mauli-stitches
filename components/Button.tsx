@@ -15,84 +15,56 @@ const Button = styled('button', {
     display: 'inline-flex',
     alignItems: 'center',
     justifyContent: 'center',
-    borderRadius: '$round',
     cursor: 'pointer',
 
     variants: {
         variant: {
             solid: {
-                color: '$white',
-                backgroundColor: '$highlight',
-                '&:hover': {
-                    boxShadow: 'inset 0 0 0 2px $colors$hiContrast'
-                },
-                '&:active': {
-                    opacity: 0.7, // TODO: Use color
-                    boxShadow: 'inset 0 0 0 2px $colors$hiContrast'
-                },
-                '&:focus': {
-                    outline: 'none',
-                    boxShadow:
-                        'inset 0 0 0 2px $colors$hiContrast, 0 0 0 1px $colors$hiContrast'
-                },
-                '&:disabled': {
-                    opacity: 0.5 // TODO: Use color
-                }
+                color: '$$loContrast',
+                backgroundColor: '$$hiContrast',
+                padding: '$$padding',
+                borderRadius: '$round'
             },
             ghost: {
-                color: '$hiContrast',
-                boxShadow: 'inset 0 0 0 2px $colors$hiContrast',
-                '&:hover': {
-                    backgroundColor: 'rgba(255,255,255,0.1)' // TODO: Use color
-                },
-                '&:active': {
-                    backgroundColor: 'rgba(255,255,255,0.3)' // TODO: Use color
-                },
-                '&:focus': {
-                    outline: 'none',
-                    boxShadow:
-                        'inset 0 0 0 2px $colors$highlight, 0 0 0 1px $colors$highlight'
-                },
-                '&:disabled': {
-                    opacity: 0.5 // TODO: Use color
-                }
+                color: '$$hiContrast',
+                boxShadow: 'inset 0 0 0 2px $$hiContrast',
+                padding: '$$padding',
+                borderRadius: '$round'
             },
             link: {
-                p: '0',
-                color: 'inherit',
-                backgroundColor: 'inherit',
-                '&:hover': {
-                    opacity: 0.5 // TODO: Use color
-                },
-                '&:active': {},
-                '&:focus': {},
-                '&:disabled': {
-                    opacity: 0.3 // TODO: Use color
-                }
+                color: '$$hiContrast'
             }
         },
-
+        color: {
+            normal: {
+                $$loContrast: '$colors$gray100',
+                $$hiContrast: '$colors$gray1000'
+            },
+            highlight: {
+                $$loContrast: '$colors$indigo100',
+                $$hiContrast: '$colors$indigo800'
+            }
+        },
         size: {
             md: {
                 fontSize: '$md',
                 fontWeight: '$bold',
-                padding: '$md $lg',
+                $$padding: '$space$md $space$lg',
                 svg: {
                     size: '$md'
                 },
                 gap: '$sm'
             }
         },
-
         fullWidth: {
             true: {
                 width: '100%'
             }
         }
     },
-
     defaultVariants: {
         variant: 'solid',
+        color: 'highlight',
         size: 'md'
     }
 });

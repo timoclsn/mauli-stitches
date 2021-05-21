@@ -7,12 +7,12 @@ const Card = styled(Box, {
     variants: {
         variant: {
             normal: {
-                color: '$hiContrast',
-                backgroundColor: 'rgba(0,0,0,0.1)' // TODO: Use color
+                color: '$gray1000',
+                backgroundColor: '$gray300'
             },
             highlight: {
-                color: '$white',
-                backgroundColor: '$highlight'
+                color: '$indigo100',
+                backgroundColor: '$indigo800'
             }
         },
 

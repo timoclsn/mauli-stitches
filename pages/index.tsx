@@ -136,6 +136,7 @@ export default function Home() {
                                         <Button
                                             as="a"
                                             variant="link"
+                                            color="normal"
                                             href="https:timoclasen.de"
                                             target="_blank">
                                             <ArrowRight />
