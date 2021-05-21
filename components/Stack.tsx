@@ -1,6 +1,8 @@
 import { createVariants, styled, theme } from '../stitches.config';
 
-const space = createVariants(theme.space, (value) => ({
+type TSpace = keyof typeof theme.space;
+
+const space = createVariants<TSpace>(theme.space, (value) => ({
     $$gap: `$space$${value}`
 }));
 

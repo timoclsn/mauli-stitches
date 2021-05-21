@@ -1,6 +1,8 @@
 import { createVariants, styled, theme } from '../stitches.config';
 
-const inset = createVariants(theme.sizes, (value) => ({
+type TSizes = keyof typeof theme.sizes;
+
+const inset = createVariants<TSizes>(theme.sizes, (value) => ({
     p: `$${value}`
 }));
 

@@ -1,15 +1,13 @@
-import { forwardRef } from 'react';
-
 import { styled } from '../stitches.config';
 
-const StyledButton = styled('button', {
+const Button = styled('button', {
     // Reset
     appearance: 'none',
     outline: 'none',
     textDecoration: 'none',
     userSelect: 'none',
     margin: '0',
-    flexShrink: '0',
+    flexShrink: 0,
     lineHeight: '1',
     border: 'none',
 
@@ -99,17 +97,4 @@ const StyledButton = styled('button', {
     }
 });
 
-export default forwardRef(function Button(
-    { children, as, type, ...props },
-    ref
-) {
-    return (
-        <StyledButton
-            as={props.href ? 'a' : as}
-            type={as === 'button' ? type : undefined}
-            ref={ref}
-            {...props}>
-            {children}
-        </StyledButton>
-    );
-});
+export default Button;

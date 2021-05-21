@@ -6,6 +6,7 @@ import Button from '../components/Button';
 import Card from '../components/Card';
 import Container from '../components/Container';
 import Heading from '../components/Heading';
+import Inline from '../components/Inline';
 import Label from '../components/Label';
 import Stack from '../components/Stack';
 import Text from '../components/Text';
@@ -106,10 +107,7 @@ export default function Home() {
                                         dsj ad sadhsa dhsdg asdgsa gdsagd
                                         asdgsgd agd sgadsagd.
                                     </Text>
-                                    <Stack
-                                        direction="horizontal"
-                                        space="sm"
-                                        wrap>
+                                    <Inline>
                                         <Label>Label</Label>
                                         <Label>Label</Label>
                                         <Label>Label</Label>
@@ -118,8 +116,7 @@ export default function Home() {
                                         <Label>Label</Label>
                                         <Label>Label</Label>
                                         <Label>Label</Label>
-                                        <Label>Label</Label>
-                                    </Stack>
+                                    </Inline>
                                     <Stack
                                         direction={{
                                             '@initial': 'vertical',
@@ -137,6 +134,7 @@ export default function Home() {
                                         </Button>
                                         <Button variant="ghost">Ghost</Button>
                                         <Button
+                                            as="a"
                                             variant="link"
                                             href="https:timoclasen.de"
                                             target="_blank">

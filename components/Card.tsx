@@ -25,7 +25,8 @@ const Card = styled(Box, {
 
     defaultVariants: {
         variant: 'normal',
-        inset: 'xl'
+        // @ts-ignore
+        inset: 'xl' // TS Does not work when Card has own varaints. Possible Stitches Bug (https://github.com/modulz/stitches/issues/530)
     }
 });
 

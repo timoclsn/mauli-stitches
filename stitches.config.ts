@@ -1,6 +1,6 @@
-import { createCss } from '@stitches/react';
+import { createCss, StitchesCss } from '@stitches/react';
 
-export const { styled, getCssString, theme, config, global } = createCss({
+export const stitchesConfig = createCss({
     theme: {
         colors: {
             white: 'white',
@@ -135,6 +135,9 @@ export const { styled, getCssString, theme, config, global } = createCss({
     }
 });
 
+export const { styled, css, global, keyframes, theme, getCssString, config } =
+    stitchesConfig;
+
 export const globalStyles = global({
     // Reset
     'html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, main, menu, nav, output, ruby, section, summary, time, mark, audio, video':
@@ -198,14 +201,16 @@ export const leadingTrimRef = {
     bottomCrop: 6
 };
 
-export function createVariants(scale, variant) {
+type CSS = StitchesCss<typeof stitchesConfig>;
+
+export function createVariants<T extends string>(scale, variant) {
     return Object.keys(scale).reduce(
         (acc, value) => ({
             ...acc,
             [value]: variant(value)
         }),
         {}
-    );
+    ) as { [key in T]: CSS };
 }
 
 export function bpValue(bp) {

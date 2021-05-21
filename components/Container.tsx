@@ -1,6 +1,8 @@
 import { bpValue, config, createVariants, styled } from '../stitches.config';
 
-const size = createVariants(config.media, (value) => ({
+type TMedia = 'initial' | 'sm' | 'md' | 'lg';
+
+const size = createVariants<TMedia>(config.media, (value) => ({
     maxWidth: bpValue(config.media[value])
 }));
 
