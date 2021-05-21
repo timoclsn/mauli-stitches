@@ -27,7 +27,7 @@ const Text = styled('span', {
                 color: 'inherit'
             },
             highlight: {
-                color: '$highlight'
+                color: '$indigo800'
             }
         },
 

@@ -1,16 +1,11 @@
 import { createCss, StitchesCss } from '@stitches/react';
+import { gray, indigo } from '@radix-ui/colors';
 
 export const stitchesConfig = createCss({
     theme: {
         colors: {
-            white: 'white',
-            black: 'black',
-            purple: '#3E51F7',
-
-            // Semantic
-            loContrast: '$white',
-            hiContrast: '$black',
-            highlight: '$purple'
+            ...gray,
+            ...indigo
         },
         fonts: {
             sans: 'Inter, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif'

@@ -4,8 +4,8 @@ const Label = styled('div', {
     fontSize: '$sm',
     px: '$md',
     py: '$sm',
-    color: '$white',
-    backgroundColor: '$purple',
+    color: '$indigo100',
+    backgroundColor: '$indigo800',
     borderRadius: '$round'
 });
 
