@@ -11,6 +11,8 @@
     "dependencies": {
         "@radix-ui/colors": "^0.1.7",
         "@stitches/react": "^0.1.9",
+        "@typescript-eslint/eslint-plugin": "^4.25.0",
+        "@typescript-eslint/parser": "^4.25.0",
         "leading-trim": "^1.0.1",
         "next": "^10.2.3",
         "react": "^17.0.2",
