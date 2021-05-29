@@ -1,6 +1,10 @@
+import * as Polymorphic from '@radix-ui/react-polymorphic';
+import { StitchesVariants } from '@stitches/react';
+import { forwardRef } from 'react';
+
 import { styled } from '../stitches.config';
 
-const Button = styled('button', {
+const StyledButton = styled('button', {
     // Reset
     appearance: 'none',
     outline: 'none',
@@ -147,5 +151,13 @@ const Button = styled('button', {
         size: 'md'
     }
 });
+
+interface ButtonProps extends StitchesVariants<typeof StyledButton> {
+    as?: 'button' | 'a';
+}
+
+const Button = forwardRef(function Button(props, ref) {
+    return <StyledButton ref={ref} {...props} />;
+}) as Polymorphic.ForwardRefComponent<'button', ButtonProps>;
 
 export default Button;
