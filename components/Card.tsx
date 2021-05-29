@@ -7,12 +7,12 @@ const Card = styled(Box, {
     variants: {
         variant: {
             normal: {
-                color: '$gray1000',
-                backgroundColor: '$gray300'
+                color: '$gray12',
+                backgroundColor: '$gray4'
             },
             highlight: {
-                color: '$indigo100',
-                backgroundColor: '$indigo800'
+                color: '$indigo2',
+                backgroundColor: '$indigo9'
             }
         },
 
@@ -25,8 +25,8 @@ const Card = styled(Box, {
 
     defaultVariants: {
         variant: 'normal',
-        // @ts-ignore
-        inset: 'xl' // TS Does not work when Card has own varaints. Possible Stitches Bug (https://github.com/modulz/stitches/issues/530)
+        // @ts-expect-error: TS Does not work when Card has own varaints. Possible Stitches Bug (https://github.com/modulz/stitches/issues/530)
+        inset: 'xl'
     }
 });
 
