@@ -156,8 +156,18 @@ interface ButtonProps extends StitchesVariants<typeof StyledButton> {
     as?: 'button' | 'a';
 }
 
-const Button = forwardRef(function Button(props, ref) {
-    return <StyledButton ref={ref} {...props} />;
+const Button = forwardRef(function Button(
+    { as = 'button', type = 'button', ...props },
+    ref
+) {
+    return (
+        <StyledButton
+            as={as}
+            type={as === 'button' ? type : undefined}
+            ref={ref}
+            {...props}
+        />
+    );
 }) as Polymorphic.ForwardRefComponent<'button', ButtonProps>;
 
 export default Button;
