@@ -64,6 +64,7 @@ const StyledButton = styled('button', {
             },
             link: {
                 color: '$$linkText',
+                backgroundColor: 'transparent',
                 '&:hover': {
                     color: '$$linkTextHover'
                 },

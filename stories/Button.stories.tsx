@@ -1,37 +1,35 @@
 import React from 'react';
-import { Story, Meta } from '@storybook/react';
+import { ArrowRight } from 'react-feather';
 
-import { Button, ButtonProps } from './Button';
+import { Button } from '../components';
 
 export default {
-  title: 'Example/Button',
-  component: Button,
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
-} as Meta;
-
-const Template: Story<ButtonProps> = (args) => <Button {...args} />;
-
-export const Primary = Template.bind({});
-Primary.args = {
-  primary: true,
-  label: 'Button',
+    title: 'Button',
+    component: Button
 };
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-  label: 'Button',
-};
+export const Normal = () => <Button>Button</Button>;
 
-export const Large = Template.bind({});
-Large.args = {
-  size: 'large',
-  label: 'Button',
-};
+export const Highlight = () => <Button color="highlight">Button</Button>;
 
-export const Small = Template.bind({});
-Small.args = {
-  size: 'small',
-  label: 'Button',
-};
+export const Ghost = () => <Button variant="ghost">Button</Button>;
+
+export const GhostHighlight = () => (
+    <Button variant="ghost" color="highlight">
+        Button
+    </Button>
+);
+
+export const Icon = () => (
+    <Button color="highlight">
+        <ArrowRight />
+        Button
+    </Button>
+);
+
+export const Link = () => (
+    <Button variant="link" color="highlight">
+        <ArrowRight />
+        Button
+    </Button>
+);
