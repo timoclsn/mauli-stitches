@@ -1,7 +1,7 @@
 import { Heading } from '../components';
 
 export default {
-    title: 'Heading',
+    title: 'Primitives/Heading',
     component: Heading
 };
 

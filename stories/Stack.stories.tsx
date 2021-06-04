@@ -1,7 +1,7 @@
 import { Button, Stack } from '../components';
 
 export default {
-    title: 'Stack',
+    title: 'Layout/Stack',
     component: Stack
 };
 

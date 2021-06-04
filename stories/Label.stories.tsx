@@ -1,7 +1,7 @@
 import { Label } from '../components';
 
 export default {
-    title: 'Label',
+    title: 'Primitives/Label',
     component: Label
 };
 

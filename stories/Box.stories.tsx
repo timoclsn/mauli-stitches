@@ -1,7 +1,7 @@
 import { Box, Button } from '../components';
 
 export default {
-    title: 'Box',
+    title: 'Layout/Box',
     component: Box
 };
 

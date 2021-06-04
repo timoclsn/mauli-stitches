@@ -1,7 +1,7 @@
 import { Inline, Label } from '../components';
 
 export default {
-    title: 'Inline',
+    title: 'Layout/Inline',
     component: Inline
 };
 

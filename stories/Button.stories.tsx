@@ -3,7 +3,7 @@ import { ArrowRight } from 'react-feather';
 import { Button } from '../components';
 
 export default {
-    title: 'Button',
+    title: 'Primitives/Button',
     component: Button
 };
 

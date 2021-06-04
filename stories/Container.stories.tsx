@@ -1,7 +1,7 @@
 import { Card, Container, Stack, Text } from '../components';
 
 export default {
-    title: 'Container',
+    title: 'Layout/Container',
     component: Container
 };
 

@@ -1,7 +1,7 @@
 import { Text } from '../components';
 
 export default {
-    title: 'Text',
+    title: 'Primitives/Text',
     component: Text
 };
 
