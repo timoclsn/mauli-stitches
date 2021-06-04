@@ -1,7 +1,7 @@
 import { styled } from '../stitches.config';
-import Box from './Box';
+import { Box } from './Box';
 
-const Card = styled(Box, {
+export const Card = styled(Box, {
     borderRadius: '$lg',
 
     variants: {
@@ -29,5 +29,3 @@ const Card = styled(Box, {
         inset: 'xl'
     }
 });
-
-export default Card;

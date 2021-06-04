@@ -6,7 +6,7 @@ const inset = createVariants<TSizes>(theme.sizes, (value) => ({
     p: `$${value}`
 }));
 
-const Box = styled('div', {
+export const Box = styled('div', {
     variants: {
         inset: {
             none: {
@@ -20,5 +20,3 @@ const Box = styled('div', {
         inset: 'none'
     }
 });
-
-export default Box;

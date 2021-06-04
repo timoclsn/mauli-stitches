@@ -20,7 +20,7 @@ const leading = createVariants(theme.lineHeights, (value) => ({
     })
 }));
 
-const Text = styled('span', {
+export const Text = styled('span', {
     variants: {
         variant: {
             normal: {
@@ -65,5 +65,3 @@ const Text = styled('span', {
         align: 'left'
     }
 });
-
-export default Text;

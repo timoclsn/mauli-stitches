@@ -6,7 +6,7 @@ const size = createVariants<TMedia>(config.media, (value) => ({
     maxWidth: bpValue(config.media[value])
 }));
 
-const Container = styled('div', {
+export const Container = styled('div', {
     mx: 'auto',
     px: '$md',
 
@@ -23,5 +23,3 @@ const Container = styled('div', {
         size: 'lg'
     }
 });
-
-export default Container;

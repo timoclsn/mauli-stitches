@@ -156,7 +156,7 @@ interface ButtonProps extends StitchesVariants<typeof StyledButton> {
     as?: 'button' | 'a';
 }
 
-const Button = forwardRef(function Button(
+export const Button = forwardRef(function Button(
     { as = 'button', type = 'button', ...props },
     ref
 ) {
@@ -169,5 +169,3 @@ const Button = forwardRef(function Button(
         />
     );
 }) as Polymorphic.ForwardRefComponent<'button', ButtonProps>;
-
-export default Button;

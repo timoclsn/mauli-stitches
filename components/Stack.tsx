@@ -6,7 +6,7 @@ const space = createVariants<TSpace>(theme.space, (value) => ({
     $$gap: `$space$${value}`
 }));
 
-const Stack = styled('div', {
+export const Stack = styled('div', {
     display: 'flex',
     gap: '$$gap',
 
@@ -72,5 +72,3 @@ const Stack = styled('div', {
         justify: 'start'
     }
 });
-
-export default Stack;
