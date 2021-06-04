@@ -16,6 +16,6 @@
         "target": "es5",
         "noImplicitAny": false
     },
-    "exclude": ["node_modules", "pages"],
+    "exclude": ["node_modules", "pages", "stories"],
     "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
 }

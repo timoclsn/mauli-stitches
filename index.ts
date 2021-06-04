@@ -1,2 +1,10 @@
-export * from './components';
+export * from './components/Box';
+export * from './components/Button';
+export * from './components/Card';
+export * from './components/Container';
+export * from './components/Heading';
+export * from './components/Inline';
+export * from './components/Label';
+export * from './components/Stack';
+export * from './components/Text';
 export { getCssString, global } from './stitches.config';
