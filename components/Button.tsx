@@ -1,6 +1,6 @@
 import * as Polymorphic from '@radix-ui/react-polymorphic';
 import { StitchesVariants } from '@stitches/react';
-import { forwardRef } from 'react';
+import React, { forwardRef } from 'react';
 
 import { styled } from '../stitches.config';
 
@@ -64,6 +64,7 @@ const StyledButton = styled('button', {
             },
             link: {
                 color: '$$linkText',
+                backgroundColor: 'transparent',
                 '&:hover': {
                     color: '$$linkTextHover'
                 },
