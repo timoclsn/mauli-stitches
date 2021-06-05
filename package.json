@@ -12,6 +12,8 @@
         "ds:build": "rollup -c",
         "ds:release": "npm run ds:build && np"
     },
+    "main": "dist/index.js",
+    "module": "dist/index.es.js",
     "files": [
         "dist"
     ],
