@@ -1,2 +1,2 @@
 export * from './components';
-export { getCssString, global } from './stitches.config';
+export { getCssString } from './stitches.config';
