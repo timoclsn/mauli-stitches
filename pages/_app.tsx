@@ -1,10 +1,13 @@
 import type { AppProps } from 'next/app';
 
-import { globalStyles } from '../stitches.config';
+import { DesignSystemProvider } from '../components';
 
 function MyApp({ Component, pageProps }: AppProps) {
-    globalStyles();
-    return <Component {...pageProps} />;
+    return (
+        <DesignSystemProvider>
+            <Component {...pageProps} />
+        </DesignSystemProvider>
+    );
 }
 
 export default MyApp;

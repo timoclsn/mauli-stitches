@@ -2,6 +2,7 @@ export * from './Box';
 export * from './Button';
 export * from './Card';
 export * from './Container';
+export * from './DesignSystemProvider';
 export * from './Heading';
 export * from './Inline';
 export * from './Label';
