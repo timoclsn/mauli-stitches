@@ -2,9 +2,12 @@ import { createVariants, styled, theme } from '../stitches.config';
 
 type TSpace = keyof typeof theme.space;
 
-const space = createVariants<TSpace>(theme.space, (value) => ({
-    $$gap: `$space$${value}`
-}));
+const space = createVariants<TSpace>(
+    theme.space,
+    (value: keyof typeof theme.space) => ({
+        $$gap: `$space$${value}`
+    })
+);
 
 export const Stack = styled('div', {
     display: 'flex',

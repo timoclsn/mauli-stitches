@@ -197,8 +197,11 @@ export const leadingTrimRef = {
 };
 
 type CSS = StitchesCss<typeof stitchesConfig>;
+interface Scale {
+    [key: string]: string;
+}
 
-export function createVariants<T extends string>(scale, variant) {
+export function createVariants<T extends string>(scale: Scale, variant: any) {
     return Object.keys(scale).reduce(
         (acc, value) => ({
             ...acc,
@@ -208,6 +211,6 @@ export function createVariants<T extends string>(scale, variant) {
     ) as { [key in T]: CSS };
 }
 
-export function bpValue(bp) {
+export function bpValue(bp: string) {
     return bp.split(' ')[1]?.slice(0, -1) || '0px';
 }

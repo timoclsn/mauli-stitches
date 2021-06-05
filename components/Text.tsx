@@ -9,16 +9,22 @@ import {
 
 type TFontSizes = keyof typeof theme.fontSizes;
 
-const size = createVariants<TFontSizes>(theme.fontSizes, (value) => ({
-    fontSize: `$${value}`
-}));
-
-const leading = createVariants(theme.lineHeights, (value) => ({
-    ...leadingTrim({
-        lineHeight: theme.lineHeights[value].value,
-        reference: leadingTrimRef
+const size = createVariants<TFontSizes>(
+    theme.fontSizes,
+    (value: keyof typeof theme.fontSizes) => ({
+        fontSize: `$${value}`
     })
-}));
+);
+
+const leading = createVariants(
+    theme.lineHeights,
+    (value: keyof typeof theme.lineHeights) => ({
+        ...leadingTrim({
+            lineHeight: parseFloat(theme.lineHeights[value].value),
+            reference: leadingTrimRef
+        })
+    })
+);
 
 export const Text = styled('span', {
     variants: {
