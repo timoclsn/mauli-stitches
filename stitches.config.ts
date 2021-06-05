@@ -1,5 +1,6 @@
 import { gray, indigo } from '@radix-ui/colors';
-import { createCss, StitchesCss } from '@stitches/react';
+import type { StitchesCss } from '@stitches/react';
+import { createCss } from '@stitches/react';
 
 export const stitchesConfig = createCss({
     theme: {
