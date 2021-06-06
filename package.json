@@ -29,8 +29,7 @@
         "build-storybook": "build-storybook",
         "ds:build": "rollup -c",
         "ds:watch": "rollup -c -w",
-        "ds:release": "npm run ds:build && np",
-        "prepare": "husky install"
+        "ds:release": "npm run ds:build && np"
     },
     "dependencies": {
         "@radix-ui/colors": "^0.1.7",
@@ -71,7 +70,15 @@
     "publishConfig": {
         "registry": "https://registry.npmjs.org"
     },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
     "lint-staged": {
-        "*.js": "eslint --cache --fix"
+        "*.{js,jsx,ts,tsx,json,css}": [
+            "npm run format",
+            "npm run lint"
+        ]
     }
 }
