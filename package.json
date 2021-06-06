@@ -12,7 +12,15 @@
         "url": "https://github.com/timoclsn/mauli-design-system/issues",
         "email": "timo@timoclasen.de"
     },
-    "author": "Timo Clasen <timo@timoclasen.de> (https://timoclasen.de)",
+    "author": {
+        "name": "Timo Clasen",
+        "email": "timo@timoclasen.de",
+        "url": "https://timoclasen.de"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/timoclsn/mauli-design-system.git"
+    },
     "main": "dist/index.js",
     "module": "dist/index.es.js",
     "files": [
