@@ -28,6 +28,7 @@
         "storybook": "start-storybook -p 6006",
         "build-storybook": "build-storybook",
         "ds:build": "rollup -c",
+        "ds:watch": "rollup -c -w",
         "ds:release": "npm run ds:build && np"
     },
     "dependencies": {
