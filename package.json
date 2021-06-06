@@ -29,7 +29,8 @@
         "build-storybook": "build-storybook",
         "ds:build": "rollup -c",
         "ds:watch": "rollup -c -w",
-        "ds:release": "npm run ds:build && np"
+        "ds:release": "npm run ds:build && np",
+        "prepare": "husky install"
     },
     "dependencies": {
         "@radix-ui/colors": "^0.1.7",
@@ -39,18 +40,14 @@
         "leading-trim": "^1.0.1"
     },
     "devDependencies": {
-        "@typescript-eslint/parser": "^4.26.0",
-        "@typescript-eslint/eslint-plugin": "^4.26.0",
-        "next": "^10.2.3",
-        "react-dom": "^17.0.2",
-        "react": "^17.0.2",
-        "react-feather": "^2.0.9",
         "@babel/core": "^7.14.3",
         "@storybook/addon-actions": "^6.2.9",
         "@storybook/addon-essentials": "^6.2.9",
         "@storybook/addon-links": "^6.2.9",
         "@storybook/react": "^6.2.9",
         "@types/react": "^17.0.9",
+        "@typescript-eslint/eslint-plugin": "^4.26.0",
+        "@typescript-eslint/parser": "^4.26.0",
         "babel-loader": "^8.2.2",
         "eslint": "^7.27.0",
         "eslint-config-prettier": "^8.3.0",
@@ -59,13 +56,22 @@
         "eslint-plugin-react": "^7.24.0",
         "eslint-plugin-react-hooks": "^4.2.0",
         "eslint-plugin-simple-import-sort": "^7.0.0",
+        "husky": "^6.0.0",
+        "lint-staged": "^11.0.0",
+        "next": "^10.2.3",
         "np": "^7.5.0",
         "prettier": "^2.3.0",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "react-feather": "^2.0.9",
         "rollup": "^2.50.6",
         "rollup-plugin-typescript2": "^0.30.0",
         "typescript": "4.2.2"
     },
     "publishConfig": {
         "registry": "https://registry.npmjs.org"
+    },
+    "lint-staged": {
+        "*.js": "eslint --cache --fix"
     }
 }
