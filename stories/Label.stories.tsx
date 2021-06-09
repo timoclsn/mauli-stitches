@@ -1,4 +1,4 @@
-import { Label } from '../components';
+import { Label } from '../src';
 
 export default {
     title: 'Primitives/Label',

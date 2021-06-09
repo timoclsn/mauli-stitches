@@ -1,4 +1,4 @@
-import { Inline, Label } from '../components';
+import { Inline, Label } from '../src';
 
 export default {
     title: 'Layout/Inline',

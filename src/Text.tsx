@@ -5,7 +5,7 @@ import {
     leadingTrimRef,
     styled,
     theme
-} from '../stitches.config';
+} from './stitches.config';
 
 type TFontSizes = keyof typeof theme.fontSizes;
 

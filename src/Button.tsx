@@ -2,7 +2,7 @@ import type * as Polymorphic from '@radix-ui/react-polymorphic';
 import type { StitchesVariants } from '@stitches/react';
 import React, { forwardRef } from 'react';
 
-import { styled } from '../stitches.config';
+import { styled } from './stitches.config';
 
 const StyledButton = styled('button', {
     // Reset

@@ -1,4 +1,4 @@
-import { Button, Stack } from '../components';
+import { Button, Stack } from '../src';
 
 export default {
     title: 'Layout/Stack',

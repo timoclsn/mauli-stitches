@@ -1,4 +1,4 @@
-import { Card, Heading, Stack, Text } from '../components';
+import { Card, Heading, Stack, Text } from '../src';
 
 export default {
     title: 'Layout/Card',

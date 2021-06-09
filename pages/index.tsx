@@ -1,15 +1,15 @@
 import Head from 'next/head';
 import { ArrowRight } from 'react-feather';
 
-import { Box } from '../components/Box';
-import { Button } from '../components/Button';
-import { Card } from '../components/Card';
-import { Container } from '../components/Container';
-import { Heading } from '../components/Heading';
-import { Inline } from '../components/Inline';
-import { Label } from '../components/Label';
-import { Stack } from '../components/Stack';
-import { Text } from '../components/Text';
+import { Box } from '../src/Box';
+import { Button } from '../src/Button';
+import { Card } from '../src/Card';
+import { Container } from '../src/Container';
+import { Heading } from '../src/Heading';
+import { Inline } from '../src/Inline';
+import { Label } from '../src/Label';
+import { Stack } from '../src/Stack';
+import { Text } from '../src/Text';
 
 export default function Home() {
     return (

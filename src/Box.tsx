@@ -1,4 +1,4 @@
-import { createVariants, styled, theme } from '../stitches.config';
+import { createVariants, styled, theme } from './stitches.config';
 
 type TSizes = keyof typeof theme.sizes;
 

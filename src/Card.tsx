@@ -1,5 +1,5 @@
-import { styled } from '../stitches.config';
 import { Box } from './Box';
+import { styled } from './stitches.config';
 
 export const Card = styled(Box, {
     borderRadius: '$lg',

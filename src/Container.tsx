@@ -1,4 +1,4 @@
-import { bpValue, config, createVariants, styled } from '../stitches.config';
+import { bpValue, config, createVariants, styled } from './stitches.config';
 
 type TMedia = 'initial' | 'sm' | 'md' | 'lg';
 

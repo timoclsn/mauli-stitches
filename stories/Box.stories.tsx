@@ -1,4 +1,4 @@
-import { Box, Button } from '../components';
+import { Box, Button } from '../src';
 
 export default {
     title: 'Layout/Box',

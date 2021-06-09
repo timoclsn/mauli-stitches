@@ -1,6 +1,6 @@
 import { ArrowRight } from 'react-feather';
 
-import { Button } from '../components';
+import { Button } from '../src';
 
 export default {
     title: 'Primitives/Button',
