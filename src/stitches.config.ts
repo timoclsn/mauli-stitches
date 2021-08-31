@@ -1,8 +1,8 @@
 import { gray, indigo } from '@radix-ui/colors';
-import type { StitchesCss } from '@stitches/react';
-import { createCss } from '@stitches/react';
+import type * as Stitches from '@stitches/react';
+import { createStitches } from '@stitches/react';
 
-export const stitchesConfig = createCss({
+export const stitchesConfig = createStitches({
     theme: {
         colors: {
             ...gray,
@@ -38,6 +38,7 @@ export const stitchesConfig = createCss({
             bold: 700
         },
         space: {
+            none: 'none',
             xs: '0.25rem',
             sm: '0.5rem',
             md: '1rem',
@@ -47,6 +48,7 @@ export const stitchesConfig = createCss({
             '3xl': '8rem'
         },
         sizes: {
+            none: 'none',
             xs: '0.25rem',
             sm: '0.5rem',
             md: '1rem',
@@ -72,69 +74,69 @@ export const stitchesConfig = createCss({
         lg: '(min-width: 1200px)'
     },
     utils: {
-        m: () => (value) => ({
+        m: (value: Stitches.ScaleValue<'space'>) => ({
             marginTop: value,
             marginBottom: value,
             marginLeft: value,
             marginRight: value
         }),
-        mt: () => (value) => ({
+        mt: (value: Stitches.ScaleValue<'space'>) => ({
             marginTop: value
         }),
-        mr: () => (value) => ({
+        mr: (value: Stitches.ScaleValue<'space'>) => ({
             marginRight: value
         }),
-        mb: () => (value) => ({
+        mb: (value: Stitches.ScaleValue<'space'>) => ({
             marginBottom: value
         }),
-        ml: () => (value) => ({
+        ml: (value: Stitches.ScaleValue<'space'>) => ({
             marginLeft: value
         }),
-        mx: () => (value) => ({
+        mx: (value: Stitches.ScaleValue<'space'> | 'auto') => ({
             marginLeft: value,
             marginRight: value
         }),
-        my: () => (value) => ({
+        my: (value: Stitches.ScaleValue<'space'>) => ({
             marginTop: value,
             marginBottom: value
         }),
-        p: () => (value) => ({
+        p: (value: Stitches.ScaleValue<'space'>) => ({
             paddingTop: value,
             paddingBottom: value,
             paddingLeft: value,
             paddingRight: value
         }),
-        pt: () => (value) => ({
+        pt: (value: Stitches.ScaleValue<'space'>) => ({
             paddingTop: value
         }),
-        pr: () => (value) => ({
+        pr: (value: Stitches.ScaleValue<'space'>) => ({
             paddingRight: value
         }),
-        pb: () => (value) => ({
+        pb: (value: Stitches.ScaleValue<'space'>) => ({
             paddingBottom: value
         }),
-        pl: () => (value) => ({
+        pl: (value: Stitches.ScaleValue<'space'>) => ({
             paddingLeft: value
         }),
-        px: () => (value) => ({
+        px: (value: Stitches.ScaleValue<'space'>) => ({
             paddingLeft: value,
             paddingRight: value
         }),
-        py: () => (value) => ({
+        py: (value: Stitches.ScaleValue<'space'>) => ({
             paddingTop: value,
             paddingBottom: value
         }),
-        size: () => (value) => ({
+        size: (value: Stitches.ScaleValue<'size'>) => ({
             width: value,
             height: value
         })
     }
 });
 
-export const { styled, css, global, keyframes, theme, getCssString, config } =
+export const { styled, css, globalCss, keyframes, theme, getCssText, config } =
     stitchesConfig;
 
-export const globalStyles = global({
+export const globalStyles = globalCss({
     // Reset
     'html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, main, menu, nav, output, ruby, section, summary, time, mark, audio, video':
         {
@@ -197,12 +199,9 @@ export const leadingTrimRef = {
     bottomCrop: 6
 };
 
-type CSS = StitchesCss<typeof stitchesConfig>;
-interface Scale {
-    [key: string]: string;
-}
+type CSS = Stitches.CSS<typeof stitchesConfig>;
 
-export function createVariants<T extends string>(scale: Scale, variant: any) {
+export function createVariants<T extends string>(scale: any, variant: any) {
     return Object.keys(scale).reduce(
         (acc, value) => ({
             ...acc,

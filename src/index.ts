@@ -7,5 +7,5 @@ export * from './Heading';
 export * from './Inline';
 export * from './Label';
 export * from './Stack';
-export { getCssString } from './stitches.config';
+export { getCssText } from './stitches.config';
 export * from './Text';

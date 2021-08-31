@@ -12,9 +12,6 @@ const inset = createVariants<TSizes>(
 export const Box = styled('div', {
     variants: {
         inset: {
-            none: {
-                p: 'none'
-            },
             ...inset
         }
     },

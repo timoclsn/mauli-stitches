@@ -99,10 +99,7 @@ export default function Home() {
                             }}>
                             <Card fullWidth>
                                 <Stack>
-                                    <Heading
-                                        as="h2"
-                                        variant="normal"
-                                        size="2xl">
+                                    <Heading variant="normal" size="2xl">
                                         Card Normal
                                     </Heading>
                                     <Text as="p">
@@ -151,10 +148,7 @@ export default function Home() {
 
                             <Card variant="highlight" fullWidth>
                                 <Stack>
-                                    <Heading
-                                        as="h2"
-                                        variant="normal"
-                                        size="2xl">
+                                    <Heading variant="normal" size="2xl">
                                         Card Highlight
                                     </Heading>
                                     <Text as="p">

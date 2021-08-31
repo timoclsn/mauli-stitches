@@ -1,5 +1,5 @@
 import type * as Polymorphic from '@radix-ui/react-polymorphic';
-import type { StitchesVariants } from '@stitches/react';
+import type { VariantProps } from '@stitches/react';
 import React, { forwardRef } from 'react';
 
 import { styled } from './stitches.config';
@@ -153,7 +153,7 @@ const StyledButton = styled('button', {
     }
 });
 
-interface ButtonProps extends StitchesVariants<typeof StyledButton> {
+interface ButtonProps extends VariantProps<typeof StyledButton> {
     as?: 'button' | 'a';
 }
 
