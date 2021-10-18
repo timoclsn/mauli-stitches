@@ -5,10 +5,10 @@ import React from 'react';
 import { globalStyles } from './stitches.config';
 
 interface Props {
-    children: ReactNode;
+  children: ReactNode;
 }
 
 export function DesignSystemProvider({ children }: Props) {
-    globalStyles();
-    return <IdProvider>{children}</IdProvider>;
+  globalStyles();
+  return <IdProvider>{children}</IdProvider>;
 }

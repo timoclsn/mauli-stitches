@@ -1,8 +1,8 @@
 import { Heading } from '../src';
 
 export default {
-    title: 'Primitives/Heading',
-    component: Heading
+  title: 'Primitives/Heading',
+  component: Heading,
 };
 
 export const Normal = () => <Heading>Heading</Heading>;
