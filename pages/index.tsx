@@ -17,61 +17,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Mauli Design System</title>
-        <meta
-          name="description"
-          content="Mauli Design System Playground"
-          key="description"
-        />
-        <link
-          rel="canonical"
-          href="https://mauli.timoclasen.de"
-          key="canonical"
-        />
-
-        <meta property="og:type" content="website" key="og:type" />
-        <meta
-          property="og:site_name"
-          content="Mauli Design System"
-          key="og:site_name"
-        />
-        <meta property="og:locale" content="de" key="og:locale" />
-        <meta
-          property="og:url"
-          content="https://mauli.timoclasen.de"
-          key="og:url"
-        />
-        <meta
-          property="og:title"
-          content="Mauli Design System"
-          key="og:title"
-        />
-        <meta
-          property="og:description"
-          content="Mauli Design System Playground"
-          key="og:description"
-        />
-        <meta
-          name="twitter:card"
-          content="summary_large_image"
-          key="twitter:card"
-        />
-        <meta
-          name="twitter:title"
-          content="Mauli Design System"
-          key="twitter:title"
-        />
-        <meta
-          name="twitter:description"
-          content="Mauli Design System Playground"
-          key="twitter:description"
-        />
-        <meta name="twitter:site" content="@timoclsn" key="twitter:site" />
-        <meta
-          name="twitter:creator"
-          content="@timoclsn"
-          key="twitter:creator"
-        />
+        <title>Mauli Stitches</title>
       </Head>
 
       <Container>
@@ -83,7 +29,7 @@ export default function Home() {
         >
           <Stack space="2xl">
             <Stack>
-              <Heading as="h1">Mauli Design System</Heading>
+              <Heading as="h1">Mauli Stitches</Heading>
               <Text as="p" variant="highlight">
                 Experimental design system exploration with Stitches.
               </Text>

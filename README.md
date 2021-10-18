@@ -1,6 +1,6 @@
 # Mauli Stitches
 
-Experimental design system exploration with [React](https://reactjs.org) [Tailwind CSS](https://tailwindcss.com).
+Experimental design system exploration with React and Stitches.
 
 Tools used:
 
