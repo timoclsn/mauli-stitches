@@ -88,7 +88,8 @@ export default function Home() {
                         <Stack>
                             <Heading as="h1">Mauli Design System</Heading>
                             <Text as="p" variant="highlight">
-                                [WIP] Design System Playground
+                                Experimental Mauli Design System implementation
+                                with Stitches.
                             </Text>
                         </Stack>
 
